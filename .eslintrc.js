@@ -17,5 +17,7 @@ module.exports = {
   plugins: ['jest'],
   rules: {
     'no-plusplus': ['off'],
+    'one-var': ['off'],
+    'one-var-declaration-per-line': ['off'],
   },
 };
