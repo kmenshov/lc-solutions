@@ -21,6 +21,7 @@ module.exports = {
     'no-plusplus': ['off'],
     'one-var': ['off'],
     'one-var-declaration-per-line': ['off'],
+    'operator-linebreak': ['error', 'after'],
     'prefer-destructuring': ['off'],
   },
 };
