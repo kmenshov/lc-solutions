@@ -1,18 +1,4 @@
-const { parseIntString } = require('../shared/utils');
-
-const stringToList = (inputString) => {
-  const arr = parseIntString(inputString);
-  const node = (val) => ({ val, next: null });
-
-  const list = node(arr.shift());
-  let currentPos = list;
-  arr.forEach((val) => {
-    currentPos.next = node(val);
-    currentPos = currentPos.next;
-  });
-
-  return list;
-};
+const { stringToList } = require('../shared/utils');
 
 exports.prompts = [
   ['Provide the first space-separated array of integers: ', stringToList],
