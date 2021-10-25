@@ -1,18 +1,5 @@
 const rnth = require('./remove-nth-node-from-end-of-list').main;
-const { stringToList } = require('../shared/utils');
-
-function listToArray(head) {
-  const arr = [];
-  if (head === null) return arr;
-
-  let currPos = head;
-  do {
-    arr.push(currPos.val);
-    currPos = currPos.next;
-  } while (currPos !== null);
-
-  return arr;
-}
+const { stringToList, listToArray } = require('../shared/utils');
 
 test('removes the Nth node from the end of the list', () => {
   expect(

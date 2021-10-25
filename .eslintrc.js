@@ -19,6 +19,7 @@ module.exports = {
     'max-len': ['error', { code: 120 }],
     'newline-per-chained-call': ['off'],
     'no-console': ['off'],
+    'no-constant-condition': ['error', { checkLoops: false }],
     'no-continue': ['off'],
     'no-plusplus': ['off'],
     'one-var': ['off'],

@@ -8,7 +8,7 @@ exports.parseInt10 = function parseInt10(str) {
   return parseInt(str, 10);
 };
 
-exports.stringToList = (inputString) => {
+exports.stringToList = function stringToList(inputString) {
   const arr = parseIntString(inputString);
   const node = (val) => ({ val, next: null });
 
@@ -20,4 +20,17 @@ exports.stringToList = (inputString) => {
   });
 
   return list;
+};
+
+exports.listToArray = function listToArray(head) {
+  const arr = [];
+  if (head === null) return arr;
+
+  let currPos = head;
+  do {
+    arr.push(currPos.val);
+    currPos = currPos.next;
+  } while (currPos !== null);
+
+  return arr;
 };
