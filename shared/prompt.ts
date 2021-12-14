@@ -13,11 +13,13 @@ const readline = require('readline').createInterface({
   output: process.stdout,
 });
 
-const readlinePromise = (prompt) => new Promise((resolve) => {
+type Prompt = [prompt: string, conversion?: (s: string) => any];
+
+const readlinePromise: (prompt: string) => Promise<string> = (prompt) => new Promise((resolve) => {
   readline.question(prompt, resolve);
 });
 
-module.exports = function promptUser(...prompts) {
+function promptUser(...prompts: Prompt[]) {
   const collectInputs = prompts.reduce(
     (prevInputsPromise, nextPrompt) => prevInputsPromise.then((inputs) => {
       const [question, transform] = nextPrompt;
@@ -28,7 +30,7 @@ module.exports = function promptUser(...prompts) {
         return inputs;
       });
     }),
-    Promise.resolve([]),
+    Promise.resolve([] as any[]),
   );
 
   return collectInputs.then((inputs) => {
@@ -36,3 +38,5 @@ module.exports = function promptUser(...prompts) {
     return inputs;
   });
 };
+
+export default promptUser;

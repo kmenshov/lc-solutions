@@ -1,4 +1,4 @@
-const prompt = require('./shared/prompt.js');
+import prompt from './shared/prompt';
 
 const separator = '/';
 let solutionPath;
