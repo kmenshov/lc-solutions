@@ -15,7 +15,7 @@ const readline = require('readline').createInterface({
 
 type Prompt = [prompt: string, conversion?: (s: string) => any];
 
-const readlinePromise: (prompt: string) => Promise<string> = (prompt) => new Promise((resolve) => {
+const readlinePromise = (prompt: string): Promise<string> => new Promise((resolve) => {
   readline.question(prompt, resolve);
 });
 

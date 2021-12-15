@@ -1,5 +1,6 @@
-/* global performance */
 /* eslint-disable no-console */
+
+const { performance } = require('perf_hooks');
 
 exports.timer = function timer(name) {
   const start = performance.now();
