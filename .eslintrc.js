@@ -5,17 +5,33 @@ module.exports = {
     'jest/globals': true,
     node: true,
   },
-  extends: [
-    'airbnb-base',
-  ],
   globals: {
     benchmark: 'readonly',
   },
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 12,
+    project: './tsconfig.json',
   },
-  plugins: ['jest'],
+  plugins: [
+    '@typescript-eslint',
+    'jest',
+  ],
+  extends: [
+    'eslint:recommended',
+    'airbnb-base',
+    'airbnb-typescript/base',
+    'plugin:jest/recommended',
+    'plugin:jest/style',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+  ],
   rules: {
+    '@typescript-eslint/no-explicit-any': ['off'],
+    '@typescript-eslint/no-non-null-assertion': ['off'],
+    '@typescript-eslint/no-var-requires': ['off'],
+    'jest/no-disabled-tests': ['off'],
+    'import/extensions': ['warn', 'never', { json: 'always' }],
     'max-len': ['error', { code: 120 }],
     'newline-per-chained-call': ['off'],
     'no-console': ['off'],
@@ -26,5 +42,6 @@ module.exports = {
     'one-var-declaration-per-line': ['off'],
     'operator-linebreak': ['error', 'after'],
     'prefer-destructuring': ['off'],
+    'prefer-template': ['off'],
   },
 };

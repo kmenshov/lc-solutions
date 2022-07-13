@@ -24,7 +24,7 @@ export const main = (n: number): string[] => {
 
     addNextParenthesis(currentCombination + ')', openingLeft, closingLeft - 1);
     addNextParenthesis(currentCombination + '(', openingLeft - 1, closingLeft);
-  }
+  };
 
   addNextParenthesis('(', n - 1, n);
 
@@ -42,7 +42,7 @@ export const alternative = (n: number): string[] => {
 
     if (openingLeft > 0) addNextParenthesis(currentCombination + '(', openingLeft - 1, closingLeft);
     if (closingLeft > openingLeft) addNextParenthesis(currentCombination + ')', openingLeft, closingLeft - 1);
-  }
+  };
 
   addNextParenthesis('(', n - 1, n);
 

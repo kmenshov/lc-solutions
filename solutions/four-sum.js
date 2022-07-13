@@ -1,4 +1,4 @@
-/* eslint-disable prefer-template, no-shadow, no-param-reassign */
+/* eslint-disable prefer-template, no-shadow, @typescript-eslint/no-shadow, no-param-reassign */
 const { parseIntString, parseInt10 } = require('../shared/utils');
 
 exports.prompts = [

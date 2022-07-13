@@ -37,6 +37,6 @@ function promptUser(...prompts: Prompt[]) {
     readline.close();
     return inputs;
   });
-};
+}
 
 export default promptUser;

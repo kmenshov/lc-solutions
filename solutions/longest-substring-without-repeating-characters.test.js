@@ -10,6 +10,7 @@ test('finds the length of the longest substring without repeating characters', (
   expect(ls('tmmzuxt')).toBe(5);
 });
 
+/* eslint-disable jest/expect-expect */
 test.skip('longest-substring-without-repeating-characters benchmark', () => {
   const repeats = 50;
 

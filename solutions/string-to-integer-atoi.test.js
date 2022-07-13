@@ -1,4 +1,8 @@
-const { main: atoiMain, alternative: atoiAlternative, alternative2: atoiAlternative2 } = require('./string-to-integer-atoi');
+const {
+  main: atoiMain,
+  alternative: atoiAlternative,
+  alternative2: atoiAlternative2,
+} = require('./string-to-integer-atoi');
 
 test('the main implementation converts a string to an integer within 32 bits', () => {
   expect(atoiMain('42')).toBe(42);
