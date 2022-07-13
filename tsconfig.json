@@ -11,8 +11,8 @@
     "isolatedModules": true
   },
   "include": [
-    "shared/**/*",
-    "solutions/**/*",
+    "./shared/**/*",
+    "./solutions/**/*",
     ".eslintrc.js",
     "./*.ts",
     "./*.js"
