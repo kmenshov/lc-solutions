@@ -40,3 +40,7 @@ exports.listToArray = function listToArray(head) {
 
   return arr;
 };
+
+exports.node = function node(val) {
+  return { val, next: null };
+};

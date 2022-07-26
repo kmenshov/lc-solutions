@@ -1,4 +1,4 @@
-const { stringToList } = require('../shared/utils');
+const { stringToList, node } = require('../shared/utils');
 
 exports.prompts = [
   ['Provide the first sorted list: ', stringToList],
@@ -9,7 +9,6 @@ exports.main = (l1, l2) => {
   if (l1 === null) return l2;
   if (l2 === null) return l1;
 
-  const node = (val) => ({ val, next: null });
   let head, sourceListsCursors;
 
   if (l1.val < l2.val) {

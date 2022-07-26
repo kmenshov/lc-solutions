@@ -1,4 +1,4 @@
-import { arrayToList } from '../shared/utils';
+import { arrayToList, node } from '../shared/utils';
 
 import type { ListNode } from '../shared/types';
 
@@ -18,8 +18,6 @@ type TwoLists = [ListNode<number> | null, ListNode<number> | null];
 export const main = (lists: ListsArray) => {
   if (lists.length === 0) return null;
   const nonEmptyLists = lists.filter((l) => l !== null);
-
-  const node = <T = any>(val: T) => ({ val, next: null });
 
   const extractMin = (listsArr: ListsArray) => {
     let minVal: number | undefined;
@@ -70,7 +68,6 @@ export const alternative = (lists: ListsArray) => {
     if (l1 === null) return l2;
     if (l2 === null) return l1;
 
-    const node = <T = any>(val: T) => ({ val, next: null });
     let head: ListNode<number>, sourceListsCursors: TwoLists;
 
     if (l1.val < l2.val) {
