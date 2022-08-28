@@ -1,10 +1,10 @@
-import { arrayToList } from '../shared/utils';
+import { stringToList } from '../shared/utils';
 
 import type { ListNode } from '../shared/types';
 
 export const prompts = [
   [
-    'Provide the array of integers: ', arrayToList,
+    'Provide the array of integers: ', stringToList,
   ],
 ];
 
